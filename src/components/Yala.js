@@ -13,7 +13,7 @@ function Yala() {
     const [loadAgain, setLoadAgain] = useState(false)
 
     useEffect(() => {
-        fetch('http://localhost:5003/api/yala').then((res) => {
+        fetch('https://cyan-worm-sari.cyclic.cloud/api/yala').then((res) => {
             res.json().then((response) => {
                 setMonday(response.yala.Monday)
                 setTuesday(response.yala.Tuesday)
@@ -28,7 +28,7 @@ function Yala() {
 
     useEffect(() => {
         if (loadAgain) {
-            fetch('http://localhost:5003/api/yala').then((res) => {
+            fetch('https://cyan-worm-sari.cyclic.cloud/api/yala').then((res) => {
                 res.json().then((response) => {
                     setMonday(response.yala.Monday)
                     setTuesday(response.yala.Tuesday)
@@ -61,7 +61,7 @@ function Yala() {
 
     const PostTo = (id) => {
         try {
-            fetch('http://localhost:5003/api/insert', {
+            fetch('https://cyan-worm-sari.cyclic.cloud/api/insert', {
                 method: "POST",
                 headers: { 'Content-type': 'application/json' },
                 body: JSON.stringify({ "teacher": id, "section": "yala" })

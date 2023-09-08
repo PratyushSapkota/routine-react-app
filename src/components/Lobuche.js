@@ -13,7 +13,7 @@ function Lobuche() {
     const [loadAgain, setLoadAgain] = useState(false)
 
     useEffect(() => {
-        fetch('http://localhost:5003/api/lobuche').then((res) => {
+        fetch('https://cyan-worm-sari.cyclic.cloud/api/lobuche').then((res) => {
             res.json().then((response) => {
                 setMonday(response.lobuche.Monday)
                 setTuesday(response.lobuche.Tuesday)
@@ -28,7 +28,7 @@ function Lobuche() {
 
     useEffect(() => {
         if (loadAgain) {
-            fetch('http://localhost:5003/api/lobuche').then((res) => {
+            fetch('https://cyan-worm-sari.cyclic.cloud/api/lobuche').then((res) => {
             res.json().then((response) => {
                 setMonday(response.lobuche.Monday)
                 setTuesday(response.lobuche.Tuesday)
@@ -61,7 +61,7 @@ function Lobuche() {
 
     const PostTo = (id) => {
         try {
-            fetch('http://localhost:5003/api/insert', {
+            fetch('https://cyan-worm-sari.cyclic.cloud/api/insert', {
                 method: "POST",
                 headers: { 'Content-type': 'application/json' },
                 body: JSON.stringify({ "teacher": id, "section": "lobuche" })

@@ -29,7 +29,7 @@ export default function Login() {
         e.preventDefault();
         let response
         try {
-            await fetch('http://localhost:5003/auth/users', {
+            await fetch('https://cyan-worm-sari.cyclic.cloud/auth/users', {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json',
