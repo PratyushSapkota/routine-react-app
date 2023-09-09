@@ -1,9 +1,9 @@
 import Lobuche from "./Lobuche"
 import Yala from "./Yala"
 import Login from "./Login"
-import React, { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
-import { RequireAuth, useAuthUser, useSignOut } from "react-auth-kit"
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { RequireAuth, useSignOut } from "react-auth-kit"
 
 function Logout(){
     const signout = useSignOut()

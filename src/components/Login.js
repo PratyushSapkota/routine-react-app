@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { useSignIn, useAuthUser } from 'react-auth-kit';
 import { useNavigate } from 'react-router-dom';
 
@@ -10,17 +10,17 @@ export default function Login() {
     const navigate = useNavigate()
     const auth = useAuthUser()
 
-    if (auth() != null && auth().section == 'yala') {
+    if (auth() != null && auth().section === 'yala') {
         window.location.replace('/yala')
-    } else if (auth() != null && auth().section == 'lobuche') {
+    } else if (auth() != null && auth().section === 'lobuche') {
         window.location.replace('/lobuche')
     }
 
     const handleChange = (e) => {
 
-        if(e.target.id == 'pass'){
+        if(e.target.id === 'pass'){
             setPassword(e.target.value)
-        }else if(e.target.id = 'uname'){
+        }else if(e.target.id === 'uname'){
             setUsername(e.target.value)
         }
     };
