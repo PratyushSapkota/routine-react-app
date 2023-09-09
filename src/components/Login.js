@@ -48,9 +48,9 @@ export default function Login() {
                     authState: { section : response.section },
                 })
 
-                if(response.section == 'yala'){
+                if(response.section === 'yala'){
                     navigate('/yala')
-                }else if(response.section == 'lobuche'){
+                }else if(response.section === 'lobuche'){
                     navigate('/lobuche')
                 }
             }
